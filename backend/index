@@ -14,20 +14,21 @@ io.on('connection', (socket) => {
 
   socket.on('message', (message) => {
     // console.log(message)
-    if(message === '') {
+    if(message.text === '' || message.author === '' || message.author === 'SYSTEM') {
       return
     }
 
-    if(message.substr(0, 5).toLowerCase() === 'clear') {
+    if(message.text.substr(0, 5).toLowerCase() === 'clear') {
       messages = []
       setTimeout(() => {
-        io.emit('message', `[SYSTEM]: all messages have been deleted`)
-        messages.push(`[SYSTEM]: all messages have been deleted`)
+        io.emit('message', {text: 'all messages have been deleted', author: 'SYSTEM'})
+        messages.push({text: 'all messages have been deleted', author: 'SYSTEM'})
       }, 200)
       return
     }
-    messages.push(`[${socket.id}]: ${message}`)
-    io.emit('message', `[${socket.id}]: ${message}`)
+
+    messages.push(message)
+    io.emit('message', message)
   })
 })
 
