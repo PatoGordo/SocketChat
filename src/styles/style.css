@@ -47,14 +47,30 @@ body {
   cursor: not-allowed;
   background: none;
 }
-li {
-  padding: 10px 0;
-  border-bottom: 1px solid #2c2c2c;
-}
 ion-icon {
   font-size: 1.8rem;
   color: rgb(41,121,255);
 }
 .inputer button:disabled > ion-icon {
   color: #555;
+}
+li {
+  padding: 10px 5px;
+  display: flex;
+  flex-direction: row;
+  border-bottom: 1px solid #2c2c2c;
+  width: 100%;
+}
+li strong {
+  margin-right: 5px;
+}
+li p {
+  white-space: pre-wrap;
+  width: 100%;
+  word-break: break-word;
+}
+#changenickname {
+  position: fixed;
+  top: 0;
+  right: 0;
 }
