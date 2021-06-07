@@ -1,0 +1,60 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Avenir, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: #2c3e50;
+}
+body {
+  height: 100vh;
+}
+#messages {
+  height: 90vh;
+  margin-bottom: 15vh;
+  overflow-y: auto;
+}
+.inputer {
+  height: 10vh;
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+.inputer input {
+  width: 80%;
+  height: 10vh;
+  border: 1px solid #aaa;
+  border-right: 0;
+  padding: 5px;
+  font-size: 20px;
+  color: #222;
+  outline: none;
+}
+.inputer button {
+  width: 20%;
+  height: 10vh;
+  border: 1px solid #aaa;
+  background: rgb(34, 35, 39);
+  border-left: 0;
+}
+.inputer input:disabled,
+.inputer button:disabled {
+  cursor: not-allowed;
+  background: none;
+}
+li {
+  padding: 10px 0;
+  border-bottom: 1px solid #2c2c2c;
+}
+ion-icon {
+  font-size: 1.8rem;
+  color: rgb(41,121,255);
+}
+.inputer button:disabled > ion-icon {
+  color: #555;
+}

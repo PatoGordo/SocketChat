@@ -1,0 +1,20 @@
+{
+  "name": "multiplayergameclientside",
+  "version": "0.0.0",
+  "license": "MIT",
+  "scripts": {
+    "start": "vite --host",
+    "dev": "vite --host",
+    "build": "tsc && vite build",
+    "serve": "vite preview"
+  },
+  "devDependencies": {
+    "typescript": "^4.2.3",
+    "vite": "^2.3.5"
+  },
+  "keywords": [],
+  "description": "",
+  "dependencies": {
+    "socket.io-client": "4.1.2"
+  }
+}
